@@ -1,0 +1,352 @@
+local misc = {
+    augments = {
+        merlinic_jubbah_fastcast = {
+            name="Merlinic Jubbah",
+            augments={
+                '"Fast Cast"+5',
+                'Mag. Acc.+14',
+            },
+        },
+        merlinic_dastanas_fastcast = {
+            name="Merlinic Dastanas",
+            augments={
+                '"Mag.Atk.Bns."+21',
+                '"Fast Cast"+5',
+                'Mag. Acc.+11',
+            }
+        },
+        merlinic_dastanas_bp = {
+            name="Merlinic Dastanas",
+            augments={
+                'Pet: Mag. Acc.+27',
+                '"Blood Pact" ability delay -1',
+                'Pet: "Mag.Atk.Bns."+9',
+            }
+        },
+        merlinic_crakows_fastcast = {
+            name="Merlinic Crackows",
+            augments={
+                'Attack+23',
+                '"Fast Cast"+5',
+                'Mag. Acc.+6',
+                '"Mag.Atk.Bns."+6'
+            }
+        },
+    },
+    jse = {
+        geo_necks = {
+            bagua_charm = "Bagua Charm"
+        },
+        geo_af = {
+            head="Geo. Galero +2",
+            body="Geomancy Tunic +2",
+            hands="Geo. Mitaines +2",
+            legs="Geomancy Pants +2",
+            feet="Geo. Sandals +3",
+        },
+        geo_relic = {
+            head={ name="Bagua Galero +3", augments={'Enhances "Primeval Zeal" effect',}},
+            body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
+            hands={ name="Bagua Mitaines +3", augments={'Enhances "Curative Recantation" effect',}},
+            legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},
+            feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
+        },
+        geo_empyrean = {
+            head="Azimuth Hood +1",
+            body="Azimuth Coat +1",
+            hands="Azimuth Gloves +1",
+            legs="Azimuth Tights +1",
+            feet="Azimuth Gaiters +1",
+        }
+    },
+    capes = {
+        geo = {
+            pet_regen = {
+                name="Nantosuelta's Cape",
+                augments={
+                    'MND+20',
+                    'Eva.+20 /Mag. Eva.+20',
+                    'Pet: "Regen"+10',
+                    'Pet: "Regen"+5',
+                    'Mag. Evasion+10',
+                }
+            },
+            healing = {
+                name="Nantosuelta's Cape",
+                augments={
+                    'MND+20',
+                    'Eva.+10 /Mag. Eva.+10',
+                    'MND+10',
+                    '"Cure" potency +10%',
+                    'Phys. dmg. taken-10%'
+                }
+            },
+            fastcast = {
+                name="Nantosuelta's Cape",
+                augments={
+                    'MND+20',
+                    'Mag. Acc+20 /Mag. Dmg.+20',
+                    '"Fast Cast"+10',
+                    'Spell interruption rate down-10%',
+                }
+            },
+            nuke = {
+                name="Nantosuelta's Cape",
+                augments={
+                    'INT+20',
+                    'Mag. Acc+20 /Mag. Dmg.+20',
+                    '"Mag.Atk.Bns."+10',
+                    'Mag. Acc.+10',
+                }
+            },
+        },
+        smn = {
+            pet_idle = {
+                name="Campestres's Cape",
+                augments={
+                    'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20',
+                    'Pet: Accuracy+5 Pet: Rng. Acc.+5',
+                    '"Fast Cast"+10',
+                }
+            },
+            blood_pact = {},
+        }
+    },
+}
+
+local jse = misc.jse
+local augments = misc.augments
+local capes = misc.capes
+
+return {
+    misc = misc,
+    geo = {
+        idle = {
+            main="Solstice",
+            sub="Sors Shield",
+            range="Dunna",
+            head=jse.geo_empyrean.head,
+            body="Jhakri Robe +2",
+            hands=jse.geo_af.hands,
+            legs="Mallquis Trews +1",
+            feet=jse.geo_af.feet,
+            neck=jse.geo_necks.bagua_charm,
+            waist="Belisama's Rope +1",
+            left_ear="Gna Earring",
+            right_ear="Fulla Earring",
+            left_ring="Jhakri Ring",
+            right_ring="Acumen Ring",
+            back=capes.geo.pet_regen,
+        },
+        pdt = {},
+        mdt = {},
+        healing = {
+            main="Gada",
+            sub="Sors Shield",
+            range="Dunna",
+            head="Vanya Hood",
+            body="Jhakri Robe +2",
+            hands="Mallquis Cuffs +1",
+            legs="Mallquis Trews +1",
+            feet="Umbani Boots",
+            neck=jse.geo_necks.bagua_charm,
+            waist="Belisama's Rope +1",
+            left_ear="Mendi. Earring",
+            right_ear="Influx Earring",
+            left_ring="Jhakri Ring",
+            right_ring="Perception Ring",
+            back=capes.geo.healing,
+        },
+        enfeebling = {
+            main="Gada",
+            sub="Sors Shield",
+            range="Dunna",
+            head="Nahtirah Hat",
+            body="Jhakri Robe +2",
+            hands="Mallquis Cuffs +1",
+            legs="Mallquis Trews +1",
+            feet="Umbani Boots",
+            neck=jse.geo_necks.bagua_charm,
+            waist="Belisama's Rope +1",
+            left_ear="Gna Earring",
+            right_ear="Fulla Earring",
+            left_ring="Jhakri Ring",
+            right_ring="Acumen Ring",
+            back=capes.geo.fastcast,
+        },
+        fastcast = {
+            main="Solstice",
+            sub="Sors Shield",
+            range="Dunna",
+            head="Nahtirah Hat", -- merlinic hood
+            body=augments.merlinic_jubbah_fastcast,
+            hands=augments.merlinic_dastanas_fastcast,
+            legs=jse.geo_af.legs,
+            feet=augments.merlinic_crakows_fastcast,
+            neck=jse.geo_necks.bagua_charm,
+            waist="Belisama's Rope +1",
+            left_ear="Gna Earring",
+            right_ear="Fulla Earring",
+            left_ring="Jhakri Ring",
+            right_ring="Acumen Ring",
+            back=capes.geo.fastcast,
+        },
+        nuke = {
+            main="Raetic Staff",
+            sub="Enki Strap",
+            range="Dunna",
+            head=jse.geo_relic.head,
+            body="Jhakri Robe +2",
+            hands="Psycloth Manillas",
+            legs="Mallquis Trews +1",
+            feet="Mallquis Clogs +1",
+            neck=jse.geo_necks.bagua_charm,
+            waist="Eschan Stone",
+            left_ear="Mendi. Earring",
+            right_ear="Influx Earring",
+            left_ring="Jhakri Ring",
+            right_ring="Acumen Ring",
+            back=capes.geo.nuke,
+        },
+        luopan_idle = {
+            main="Solstice",
+            sub="Sors Shield",
+            range="Dunna",
+            head=jse.geo_empyrean.head,
+            body=jse.geo_af.body,
+            hands=jse.geo_af.hands,
+            legs="Mallquis Trews +1",-- Psycloth Lappas Path D
+            feet=jse.geo_relic.feet,
+            neck=jse.geo_necks.bagua_charm,
+            waist="Belisama's Rope +1",
+            left_ear="Gna Earring",
+            right_ear="Fulla Earring",
+            left_ring="Jhakri Ring",
+            right_ring="Acumen Ring",
+            back=capes.geo.pet_regen,
+        },
+        buff_luopan = {
+            main="Solstice",
+            sub="Sors Shield",
+            range="Dunna",
+            head=jse.geo_empyrean.head,
+            body=jse.geo_relic.body,
+            hands=jse.geo_af.hands,
+            legs=jse.geo_relic.legs,
+            feet=jse.geo_relic.feet,
+            neck=jse.geo_necks.bagua_charm,
+            waist="Belisama's Rope +1",
+            left_ear="Gna Earring",
+            right_ear="Fulla Earring",
+            left_ring="Stikini Ring",
+            right_ring="Stikini Ring",
+            back=capes.geo.pet_regen,
+        },
+        buff_indi = {
+            main="Solstice",
+            sub="Sors Shield",
+            range="Dunna",
+            head="Nahtirah Hat",
+            body="Jhakri Robe +2",
+            hands=jse.geo_af.hands,
+            legs=jse.geo_relic.legs,
+            feet=jse.geo_empyrean.feet,
+            neck=jse.geo_necks.bagua_charm,
+            waist="Belisama's Rope +1",
+            left_ear="Gna Earring",
+            right_ear="Fulla Earring",
+            left_ring="Stikini Ring",
+            right_ring="Stikini Ring",
+            back=capes.geo.pet_regen,
+        },
+    },
+    smn = {
+        idle = {
+            ammo="Seraphicaller",
+            main="Espiritus",
+            sub="Enki Strap",
+            head="Inyanga Tiara +1",
+            body="Inyanga Jubbah +1",
+            hands="Inyan. Dastanas +1",
+            legs="Inyanga Shalwar +1",
+            feet="Inyan. Crackows +1",
+            neck="Shulmanu Collar",
+            waist="Belisama's Rope +1",
+            left_ear="Flashward Earring",
+            right_ear="Influx Earring",
+            left_ring="Inyanga Ring",
+            right_ring="Tali'ah Ring",
+            back=capes.smn.pet_idle,
+        },
+        fastcast = {
+            ammo="Seraphicaller",
+            main="Espiritus",
+            sub="Enki Strap",
+            head="Nahtirah Hat",
+            body="Inyanga Jubbah +1",
+            hands=augments.merlinic_dastanas_fastcast,
+            legs="Vanya Slops",
+            feet=augments.merlinic_crakows_fastcast,
+            neck="Shulmanu Collar",
+            waist="Belisama's Rope +1",
+            left_ear="Flashward Earring",
+            right_ear="Influx Earring",
+            left_ring="Inyanga Ring",
+            right_ring="Tali'ah Ring",
+            back=capes.smn.pet_idle,
+        },
+        bloodpact = {
+        },
+        healing = {
+            main="Gada",
+            sub="Sors Shield",
+            head="Vanya Hood",
+            body="Vanya Robe",
+            hands="Inyan. Dastanas +1",
+            legs="Vanya Slops",
+            feet="Vanya Clogs",
+            neck="Shulmanu Collar",
+            waist="Belisama's Rope +1",
+            left_ear="Mendi. Earring",
+            right_ear="Influx Earring",
+            left_ring="Tali'ah Ring",
+            right_ring="Inyanga Ring",
+            back=capes.smn.pet_idle,
+        },
+        nuke = {},
+        perpetuation = {
+            ammo="Seraphicaller",
+            main="Was",
+            sub="Enki Strap",
+            head="Inyanga Tiara +1",
+            body="Inyanga Jubbah +1",
+            hands="Inyan. Dastanas +1",
+            legs="Inyanga Shalwar +1",
+            feet="Baayami Sabots",
+            neck="Shulmanu Collar",
+            waist="Incarnation Sash",
+            left_ear="Flashward Earring",
+            right_ear="Influx Earring",
+            left_ring="Inyanga Ring",
+            right_ring="Tali'ah Ring",
+            back=capes.smn.pet_idle,
+        },
+        summoning = {
+            ammo="Seraphicaller",
+            main="Was",
+            sub="Vox Strap",
+            head="Tali'ah Turban",
+            body="Baayami Robe",
+            hands="Baayami Cuffs",
+            legs="Baayami Slops", -- baayami or relic?
+            feet="Baayami Sabots",
+            neck="Shulmanu Collar",
+            waist="Lucidity Sash",
+            left_ear="Mendi. Earring",
+            right_ear="Flashward Earring",
+            left_ring="Stikini Ring",
+            right_ring="Stikini Ring",
+            back=capes.smn.pet_idle,
+        },
+    }
+}
