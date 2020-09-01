@@ -18,6 +18,22 @@ local misc = {
                 'Haste+3%',
             }
         },
+        carmine_mask_macc={
+            name="Carmine Mask +1",
+            augments={
+                'Accuracy+20',
+                'Mag. Acc.+12',
+                '"Fast Cast"+4',
+            }
+        },
+        carmine_scale_mail_drain={
+            name="Carm. Sc. Mail +1",
+            augments={
+                'MP+80',
+                'INT+12',
+                'MND+12',
+            }
+        },
         odyssean_cuisses_fastcast = {
             name="Odyssean Cuisses",
             augments={
@@ -39,14 +55,13 @@ local misc = {
             }
         },
         odyssean_greaves_fastcast = {
-            -- need more fastcast
-            -- make sure to validate the spell rate lmawo
             name="Odyssean Greaves",
-            -- augments={
-            --     'Spell interruption rate down -9%',
-            --     'INT+8',
-            --     'Mag. Acc.+7 "Mag.Atk.Bns."+7',
-            -- }
+            augments={
+                '"Mag.Atk.Bns."+8',
+                '"Fast Cast"+5',
+                'CHR+5',
+                'Mag. Acc.+3',
+            }
         },
         valorous_mask_ws = {
             name="Valorous Mask",
@@ -246,14 +261,14 @@ local gearmap = {
         generic_ws = {},
         fastcast = {
             ammo="Seeth. Bomblet +1",
-            head=jse.drk_relic.head, -- specific to dark magic only. want to get carmine mask +1(PathD) for generic
+            head=augments.carmine_mask_macc, -- specific to dark magic only. want to get carmine mask +1(PathD) for generic
             body=jse.drk_relic.body,
             hands=jse.drk_relic.hands, -- replace with augmented odyssean_guanlets???
             legs=augments.odyssean_cuisses_fastcast, --
             feet=augments.odyssean_greaves_fastcast, -- or carmine +1 if can't get better augs
             neck="Erra Pendant",
             waist="Tempus Fugit",
-            left_ear="Gwati Earring",
+            left_ear="Halasz Earring",
             right_ear="Etiolation Earring",
             left_ring="Evanescence Ring",
             right_ring="Kishar Ring",
@@ -268,14 +283,24 @@ local gearmap = {
             feet=jse.drk_af.feet,
             neck="Erra Pendant",
             waist="Sailfi Belt +1",
-            left_ear="Gwati Earring",
-            right_ear="Lugra Earring +1",
+            -- left_ear="Gwati Earring",
+            right_ear="Gwati Earring",
             left_ring="Evanescence Ring",
             right_ring="Kishar Ring",
             back=capes.drk.int_nuke
         },
         dark_magic = {
     		head=jse.drk_af.head,
+            body=augments.carmine_scale_mail_drain,
+            hands=jse.drk_relic.hands,
+    		legs=jse.drk_relic.legs,
+            feet=jse.drk_af.feet,
+    		neck="Erra Pendant",
+    		right_ring="Evanescence Ring",
+    	},
+        drains = {
+    		head=jse.drk_af.head,
+            body=augments.carmine_scale_mail_drain,
             hands=jse.drk_relic.hands,
     		legs=jse.drk_relic.legs,
             feet=jse.drk_af.feet,

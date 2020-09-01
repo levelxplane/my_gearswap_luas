@@ -7,18 +7,18 @@ include('organizer-lib')
 local character_gear = require 'Berlioz_Gear'
 local drk_gear = character_gear.drk
 local drk_capes = character_gear.misc.capes.drk
+local misc_gear = character_gear.misc
 
 local drk_af = character_gear.misc.jse.drk_af
 local drk_relic = character_gear.misc.jse.drk_relic
 local drk_empyrean = character_gear.misc.jse.drk_empyrean
 
-local TMP_WEP_INDEX = 1
 function get_sets()
     send_command('bind ^f4 gs c C10') -- Toggle ofr Dark Seal
 
     --AccArray = {"LowACC","MidACC","HighACC"} -- 3 Levels Of Accuracy Sets For TP/WS/Hybrid/Stun. First Set Is LowACC. Add More ACC Sets If Needed Then Create Your New ACC Below. Most of These Sets Are Empty So You Need To Edit Them On Your Own. Remember To Check What The Combined Set Is For Each Sets. --
-    AccIndex = 1
-    AccArray = {"HighACC","LowACC"}
+    AccIndex = 2
+    AccArray = {"LowACC","MidACC","HighACC"}
 
     WeaponIndex = 1
     WeaponArray = {"Apocalypse", "ZantetsukenX", "Deathbane", "EmpyreanTrainer"} -- Default Main Weapon Is Liberator. Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
@@ -584,9 +584,9 @@ function get_sets()
 
 
     -- Waltz Set --
-    sets.Waltz ={}
+    sets.Waltz = {}
 
-    sets.Precast ={}
+    sets.Precast = {}
     -- Fastcast Set --
     sets.Precast.FastCast = drk_gear.fastcast
 
@@ -596,13 +596,13 @@ function get_sets()
     })
 
     -- Midcast Base Set --
-    sets.Midcast = set_combine(sets.Precast.FastCast, drk_gear.nuke_basic)
+    sets.Midcast = {}
 
     -- Magic Haste Set --
     sets.Midcast.Haste = set_combine(sets.Precast.FastCast,{})
 
     -- Dark Magic Set --
-    sets.Midcast['Dark Magic'] = set_combine(sets.Midcast, drk_gear.dark_magic)
+    sets.Midcast['Dark Magic'] = set_combine(sets.Precast.FastCast, drk_gear.dark_magic)
 
     -- Absorb Set --
     sets.Midcast.Absorb = set_combine(sets.Midcast['Dark Magic'], {
@@ -611,7 +611,10 @@ function get_sets()
         }
     )
     sets.Midcast.Absorb.MidACC = set_combine(sets.Midcast.Absorb,{})
-    sets.Midcast.Absorb.HighACC = set_combine(sets.Midcast.Absorb.MidACC,{})
+    sets.Midcast.Absorb.HighACC = set_combine(sets.Midcast.Absorb.MidACC,{
+        head=misc_gear.augments.carmine_mask_macc,
+        feet=drk_af.feet,
+    })
     sets.Midcast.Absorb.MaxACC = set_combine(sets.Midcast.Absorb.HighACC,{})
 -- Absorb-TP Set --
     sets.Midcast['Absorb-TP'] = set_combine(sets.Midcast.Absorb, {})
@@ -619,11 +622,15 @@ function get_sets()
     -- Stun Sets --
     sets.Midcast.Stun = set_combine(sets.Precast.FastCast, drk_gear.dark_magic)
     sets.Midcast.Stun.MidACC = set_combine(sets.Midcast.Stun,{})
-    sets.Midcast.Stun.HighACC = set_combine(sets.Midcast.Stun.MidACC,{})
+    sets.Midcast.Stun.HighACC = set_combine(sets.Midcast.Stun.MidACC,{
+        head=misc_gear.augments.carmine_mask_macc,
+        feet=drk_af.feet,
+    })
 
     -- Endark Set --
     sets.Midcast.Endark2 = set_combine(sets.Midcast['Dark Magic'], {
             head=drk_af.head,
+            --legs=heathen flanchard ; ;
             feet="Rat. Sollerets +1",
         }
     )
@@ -810,6 +817,9 @@ function midcast(spell,action)
     if buffactive["Dark Seal"] and DarkSealIndex==0 then -- Equip Aug'd Fall. Burgeonet +1 When You Have Dark Seal Up --
                     equipSet = set_combine(equipSet,{head="Fall. Burgeonet +1"})
     end
+    if equipSet[AccArray[AccIndex]] then
+        equipSet = equipSet[AccArray[AccIndex]]
+    end
     equip(equipSet)
 end
 
@@ -863,19 +873,9 @@ function status_change(new,old)
         end
         if equipSet[WeaponArray[WeaponIndex]] then
             equipSet = equipSet[WeaponArray[WeaponIndex]]
-
-            -- -- only change macro if weaponindex has changed
-            -- if WeaponIndex ~= TMP_WEP_INDEX then
-            --     select_default_macro_book()
-            --     TMP_WEP_INDEX = WeaponIndex
-            -- end
         end
         if equipSet[player.sub_job] then
             equipSet = equipSet[player.sub_job]
-            -- if WeaponIndex ~= TMP_WEP_INDEX then
-            --     select_default_macro_book()
-            --     TMP_WEP_INDEX = WeaponIndex
-            -- end
         end
         if equipSet[AccArray[AccIndex]] then
             equipSet = equipSet[AccArray[AccIndex]]
