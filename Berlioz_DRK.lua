@@ -49,61 +49,61 @@ function get_sets()
     sets.Idle.Regen = set_combine(sets.Idle,{})
     sets.Idle.Regen.Apocalypse = set_combine(sets.Idle.Regen,{
             main="Apocalypse"})
-    sets.Idle.Regen.Apocalypse.SAM = set_combine(sets.Idle.Regen,{
-            main="Apocalypse"})
+    -- sets.Idle.Regen.Apocalypse.SAM = set_combine(sets.Idle.Regen,{
+    --         main="Apocalypse"})
     sets.Idle.Regen.Deathbane = set_combine(sets.Idle.Regen,{
             main="Deathbane"})
-    sets.Idle.Regen.Deathbane.SAM = set_combine(sets.Idle.Regen,{
-            main="Deathbane"})
+    -- sets.Idle.Regen.Deathbane.SAM = set_combine(sets.Idle.Regen,{
+    --         main="Deathbane"})
     sets.Idle.Regen.ZantetsukenX = set_combine(sets.Idle.Regen,{
             main="Zantetsuken X"})
-    sets.Idle.Regen.ZantetsukenX.SAM = set_combine(sets.Idle.Regen,{
-            main="Zantetsuken X"})
+    -- sets.Idle.Regen.ZantetsukenX.SAM = set_combine(sets.Idle.Regen,{
+    --         main="Zantetsuken X"})
 
     -- Movement Sets --
     sets.Idle.Movement = set_combine(sets.Idle.Regen,{})
     sets.Idle.Movement.Apocalypse = set_combine(sets.Idle.Movement,{
             main="Apocalypse"})
-    sets.Idle.Movement.Apocalypse.SAM = set_combine(sets.Idle.Movement,{
-            main="Apocalypse"})
+    -- sets.Idle.Movement.Apocalypse.SAM = set_combine(sets.Idle.Movement,{
+    --         main="Apocalypse"})
     sets.Idle.Movement.Deathbane = set_combine(sets.Idle.Movement,{
             main="Deathbane"})
-    sets.Idle.Movement.Deathbane.SAM = set_combine(sets.Idle.Movement,{
-            main="Deathbane"})
+    -- sets.Idle.Movement.Deathbane.SAM = set_combine(sets.Idle.Movement,{
+    --         main="Deathbane"})
     sets.Idle.Movement.ZantetsukenX = set_combine(sets.Idle.Movement,{
             main="Zantetsuken X"})
-    sets.Idle.Movement.ZantetsukenX.SAM = set_combine(sets.Idle.Movement,{
-            main="Zantetsuken X"})
+    -- sets.Idle.Movement.ZantetsukenX.SAM = set_combine(sets.Idle.Movement,{
+    --         main="Zantetsuken X"})
 
     -- Refresh Sets --
     sets.Idle.Refresh = {}
     sets.Idle.Refresh.Apocalypse = set_combine(sets.Idle.Refresh,{
             main="Apocalypse"})
-    sets.Idle.Refresh.Apocalypse.SAM = set_combine(sets.Idle.Refresh,{
-            main="Apocalypse"})
+    -- sets.Idle.Refresh.Apocalypse.SAM = set_combine(sets.Idle.Refresh,{
+    --         main="Apocalypse"})
     sets.Idle.Refresh.ZantetsukenX = set_combine(sets.Idle.Refresh,{
             main="Zantetsuken X"})
-    sets.Idle.Refresh.ZantetsukenX.SAM = set_combine(sets.Idle.Refresh,{
-            main="Zantetsuken X"})
+    -- sets.Idle.Refresh.ZantetsukenX.SAM = set_combine(sets.Idle.Refresh,{
+    --         main="Zantetsuken X"})
     sets.Idle.Refresh.Deathbane = set_combine(sets.Idle.Refresh,{
             main="Deathbane"})
-    sets.Idle.Refresh.Deathbane.SAM = set_combine(sets.Idle.Refresh,{
-            main="Deathbane"})
+    -- sets.Idle.Refresh.Deathbane.SAM = set_combine(sets.Idle.Refresh,{
+    --         main="Deathbane"})
 
     -- Regain Sets --
     sets.Idle.Regain = set_combine(sets.Idle.Regen,{})
     sets.Idle.Regain.Apocalypse = set_combine(sets.Idle.Regain,{
             main="Apocalypse"})
-    sets.Idle.Regain.Apocalypse.SAM = set_combine(sets.Idle.Regain,{
-            main="Apocalypse"})
+    -- sets.Idle.Regain.Apocalypse.SAM = set_combine(sets.Idle.Regain,{
+    --         main="Apocalypse"})
     sets.Idle.Regain.ZantetsukenX = set_combine(sets.Idle.Regain,{
             main="Zantetsuken X"})
-    sets.Idle.Regain.ZantetsukenX.SAM = set_combine(sets.Idle.Regain,{
-            main="Zantetsuken X"})
+    -- sets.Idle.Regain.ZantetsukenX.SAM = set_combine(sets.Idle.Regain,{
+    --         main="Zantetsuken X"})
     sets.Idle.Regain.Deathbane = set_combine(sets.Idle.Regain,{
             main="Deathbane"})
-    sets.Idle.Regain.Deathbane.SAM = set_combine(sets.Idle.Regain,{
-            main="Deathbane"})
+    -- sets.Idle.Regain.Deathbane.SAM = set_combine(sets.Idle.Regain,{
+    --         main="Deathbane"})
 
     sets.Twilight = {head="Twilight Helm",body="Twilight Mail"}
 
@@ -360,7 +360,7 @@ function get_sets()
     -------------------------------------------------------------------------------------------------------
     sets.TP.EmpyreanTrainer = set_combine(
         drk_gear.tp_low_acc,
-        {main="Break Blade", sub="Utu Grip"}
+        {main="Albion", sub="Utu Grip"}
     )
     sets.TP.EmpyreanTrainer.MidACC = set_combine(sets.TP.EmpyreanTrainer,  drk_gear.tp_mid_acc)
     sets.TP.EmpyreanTrainer.HighACC = set_combine(sets.TP.EmpyreanTrainer.MidACC,{})
