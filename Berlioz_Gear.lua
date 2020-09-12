@@ -101,7 +101,7 @@ local misc = {
             body="Ignominy Cuirass +3",
             hands="Ig. Gauntlets +3",
             legs="Ig. Flanchard +3",
-            feet="Ig. Sollerets +2",
+            feet="Ig. Sollerets +3",
         },
         drk_relic = {
             head={

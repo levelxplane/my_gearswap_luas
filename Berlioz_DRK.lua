@@ -21,7 +21,18 @@ function get_sets()
     AccArray = {"LowACC","MidACC","HighACC"}
 
     WeaponIndex = 1
-    WeaponArray = {"Apocalypse", "ZantetsukenX", "Deathbane", "EmpyreanTrainer"} -- Default Main Weapon Is Liberator. Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
+    WeaponArray = {
+        "Apocalypse",
+        -- "ZantetsukenX",
+        -- "EmpyreanTrainer",
+        -- "Calabolg",
+        -- "Deathbane",
+        "WaxSword",
+        "BrassDagger",
+        "Claymore",
+        "BrassZaghnal",
+        -- "ShaWujingsLance",
+    } -- Default Main Weapon Is Liberator. Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
 
     IdleIndex = 1
     IdleArray = {"Movement","Regen","Refresh","Regain"} -- Default Idle Set Is Movement --
@@ -200,88 +211,6 @@ function get_sets()
     sets.TP.Apocalypse.MidACC.AM.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.MidACC.HighHaste,{})
     sets.TP.Apocalypse.HighACC.AM.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.HighACC.HighHaste,{})
 
-    -- -------------------------------------------------------------------------------------------------------
-    -- -- Apocalypse(AM Down) /SAM TP Sets -------------------------------------------------------------------
-    -- -------------------------------------------------------------------------------------------------------
-    -- sets.TP.Apocalypse.SAM = sets.TP.Apocalypse
-    -- sets.TP.Apocalypse.SAM.MidACC = set_combine(sets.TP.Apocalypse.MidACC, {})
-    -- sets.TP.Apocalypse.SAM.HighACC = set_combine(sets.TP.Apocalypse.HighACC, {})
-    --
-    -- -- Apocalypse(AM Up) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM = set_combine(sets.TP.Apocalypse.AM, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM = set_combine(sets.TP.Apocalypse.MidACC.AM, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM = set_combine(sets.TP.Apocalypse.HighACC.AM, {})
-    --
-    -- -- Apocalypse(AM Down: High Haste) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.HighHaste = set_combine(sets.TP.Apocalypse.HighHaste, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.HighHaste = set_combine(sets.TP.Apocalypse.MidACC.HighHaste, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.HighHaste = set_combine(sets.TP.Apocalypse.HighACC.HighHaste, {})
-    --
-    -- -- Apocalypse(AM Up: High Haste) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM.HighHaste = set_combine(sets.TP.Apocalypse.AM.HighHaste, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM.HighHaste = set_combine(sets.TP.Apocalypse.MidACC.AM.HighHaste, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM.HighHaste = set_combine(sets.TP.Apocalypse.HighACC.AM.HighHaste, {})
-    --
-    -- -- Apocalypse(AM Down: Ionis) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.Ionis = set_combine(sets.TP.Apocalypse.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.Ionis = set_combine(sets.TP.Apocalypse.MidACC.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.Ionis = set_combine(sets.TP.Apocalypse.HighACC.Ionis, {})
-    --
-    -- -- Apocalypse(AM Up: Ionis) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM.Ionis = set_combine(sets.TP.Apocalypse.AM.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM.Ionis = set_combine(sets.TP.Apocalypse.MidACC.AM.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM.Ionis = set_combine(sets.TP.Apocalypse.HighACC.AM.Ionis, {})
-    --
-    -- -- Apocalypse(AM Down: High Haste + Ionis) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.HighHaste.Ionis = set_combine(sets.TP.Apocalypse.HighHaste.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.HighHaste.Ionis = set_combine(sets.TP.Apocalypse.MidACC.HighHaste.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.HighHaste.Ionis = set_combine(sets.TP.Apocalypse.HighACC.HighHaste.Ionis, {})
-    --
-    -- -- Apocalypse(AM Up: High Haste + Ionis) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM.HighHaste.Ionis = set_combine(sets.TP.Apocalypse.AM.HighHaste.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM.HighHaste.Ionis = set_combine(sets.TP.Apocalypse.MidACC.AM.HighHaste.Ionis, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM.HighHaste.Ionis = set_combine(sets.TP.Apocalypse.HighACC.AM.HighHaste.Ionis, {})
-    --
-    -- -- Apocalypse(AM Down: SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.STP = set_combine(sets.TP.Apocalypse.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.STP = set_combine(sets.TP.Apocalypse.MidACC.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.STP = set_combine(sets.TP.Apocalypse.HighACC.STP, {})
-    --
-    -- -- Apocalypse(AM Up: SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM.STP = set_combine(sets.TP.Apocalypse.AM.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM.STP = set_combine(sets.TP.Apocalypse.MidACC.AM.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM.STP = set_combine(sets.TP.Apocalypse.HighACC.AM.STP, {})
-    --
-    -- -- Apocalypse(AM Down: High Haste + SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.HighHaste.STP = set_combine(sets.TP.Apocalypse.HighHaste.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.HighHaste.STP = set_combine(sets.TP.Apocalypse.MidACC.HighHaste.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.HighHaste.STP = set_combine(sets.TP.Apocalypse.HighACC.HighHaste.STP, {})
-    --
-    -- -- Apocalypse(AM Up: High Haste + SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM.HighHaste.STP = set_combine(sets.TP.Apocalypse.AM.HighHaste.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM.HighHaste.STP = set_combine(sets.TP.Apocalypse.MidACC.AM.HighHaste.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM.HighHaste.STP = set_combine(sets.TP.Apocalypse.HighACC.AM.HighHaste.STP, {})
-    --
-    -- -- Apocalypse(AM Down: Ionis + SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.Ionis.STP = set_combine(sets.TP.Apocalypse.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.Ionis.STP = set_combine(sets.TP.Apocalypse.MidACC.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.Ionis.STP = set_combine(sets.TP.Apocalypse.HighACC.Ionis.STP, {})
-    --
-    -- -- Apocalypse(AM Up: Ionis + SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM.Ionis.STP = set_combine(sets.TP.Apocalypse.AM.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM.Ionis.STP = set_combine(sets.TP.Apocalypse.MidACC.AM.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM.Ionis.STP = set_combine(sets.TP.Apocalypse.HighACC.AM.Ionis.STP, {})
-    --
-    -- -- Apocalypse(AM Down: High Haste + Ionis + SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.HighHaste.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.MidACC.HighHaste.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.HighACC.HighHaste.Ionis.STP, {})
-    --
-    -- -- Apocalypse(AM Up: High Haste + Ionis + SAM Roll) /SAM TP Sets --
-    -- sets.TP.Apocalypse.SAM.AM.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.AM.HighHaste.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.MidACC.AM.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.MidACC.AM.HighHaste.Ionis.STP, {})
-    -- sets.TP.Apocalypse.SAM.HighACC.AM.HighHaste.Ionis.STP = set_combine(sets.TP.Apocalypse.HighACC.AM.HighHaste.Ionis.STP, {})
-
     -------------------------------------------------------------------------------------------------------
     ------------------------------------------Zantetsuken X------------------------------------------------
     -------------------------------------------------------------------------------------------------------
@@ -320,47 +249,12 @@ function get_sets()
     sets.TP.ZantetsukenX.MidACC.HighHaste.Ionis.STP = set_combine(sets.TP.ZantetsukenX.MidACC.HighHaste,{})
     sets.TP.ZantetsukenX.HighACC.HighHaste.Ionis.STP = set_combine(sets.TP.ZantetsukenX.HighACC.HighHaste,{})
     --
-    -- -------------------------------------------------------------------------------------------------------
-    -- --- Zantetsuken X /SAM ----------------------------------------------------------------------------------------------
-    -- -------------------------------------------------------------------------------------------------------
-    -- sets.TP.ZantetsukenX.SAM = sets.TP.ZantetsukenX
-    -- sets.TP.ZantetsukenX.SAM.MidACC = set_combine(sets.TP.ZantetsukenX.MidACC, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC = set_combine(sets.TP.ZantetsukenX.HighACC, {})
-    --
-    -- sets.TP.ZantetsukenX.SAM.HighHaste = set_combine(sets.TP.ZantetsukenX.HighHaste, {})
-    -- sets.TP.ZantetsukenX.SAM.MidACC.HighHaste = set_combine(sets.TP.ZantetsukenX.MidACC.HighHaste, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC.HighHaste = set_combine(sets.TP.ZantetsukenX.HighACC.HighHaste, {})
-    --
-    -- sets.TP.ZantetsukenX.SAM.Ionis = set_combine(sets.TP.ZantetsukenX.Ionis, {})
-    -- sets.TP.ZantetsukenX.SAM.MidACC.Ionis = set_combine(sets.TP.ZantetsukenX.MidACC.Ionis, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC.Ionis = set_combine(sets.TP.ZantetsukenX.HighACC.Ionis, {})
-    --
-    -- sets.TP.ZantetsukenX.SAM.HighHaste.Ionis = set_combine(sets.TP.ZantetsukenX.HighHaste.Ionis, {})
-    -- sets.TP.ZantetsukenX.SAM.MidACC.HighHaste.Ionis = set_combine(sets.TP.ZantetsukenX.MidACC.HighHaste.Ionis, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC.HighHaste.Ionis = set_combine(sets.TP.ZantetsukenX.HighACC.HighHaste.Ionis, {})
-    --
-    -- sets.TP.ZantetsukenX.SAM.STP = set_combine(sets.TP.ZantetsukenX.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.MidACC.STP = set_combine(sets.TP.ZantetsukenX.MidACC.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC.STP = set_combine(sets.TP.ZantetsukenX.HighACC.STP, {})
-    --
-    -- sets.TP.ZantetsukenX.SAM.HighHaste.STP = set_combine(sets.TP.ZantetsukenX.HighHaste.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.MidACC.HighHaste.STP = set_combine(sets.TP.ZantetsukenX.MidACC.HighHaste.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC.HighHaste.STP = set_combine(sets.TP.ZantetsukenX.HighACC.HighHaste.STP, {})
-    --
-    -- sets.TP.ZantetsukenX.SAM.Ionis.STP = set_combine(sets.TP.ZantetsukenX.Ionis.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.MidACC.Ionis.STP = set_combine(sets.TP.ZantetsukenX.MidACC.Ionis.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC.Ionis.STP = set_combine(sets.TP.ZantetsukenX.HighACC.Ionis.STP, {})
-    --
-    -- sets.TP.ZantetsukenX.SAM.HighHaste.Ionis.STP = set_combine(sets.TP.ZantetsukenX.HighHaste.Ionis.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.MidACC.HighHaste.Ionis.STP = set_combine(sets.TP.ZantetsukenX.MidACC.HighHaste.Ionis.STP, {})
-    -- sets.TP.ZantetsukenX.SAM.HighACC.HighHaste.Ionis.STP = set_combine(sets.TP.ZantetsukenX.HighACC.HighHaste.Ionis.STP, {})
-
     -------------------------------------------------------------------------------------------------------
     -------------------------------Place Holder for Empy---------------------------------------------------
     -------------------------------------------------------------------------------------------------------
     sets.TP.EmpyreanTrainer = set_combine(
         drk_gear.tp_low_acc,
-        {main="Albion", sub="Utu Grip"}
+        {main="Caladbolg", sub="Utu Grip"}
     )
     sets.TP.EmpyreanTrainer.MidACC = set_combine(sets.TP.EmpyreanTrainer,  drk_gear.tp_mid_acc)
     sets.TP.EmpyreanTrainer.HighACC = set_combine(sets.TP.EmpyreanTrainer.MidACC,{})
@@ -393,113 +287,50 @@ function get_sets()
     sets.TP.EmpyreanTrainer.MidACC.HighHaste.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.MidACC.HighHaste,{})
     sets.TP.EmpyreanTrainer.HighACC.HighHaste.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.HighACC.HighHaste,{})
 
-    -- -------------------------------------------------------------------------------------------------------
-    -- -------------------------------Place Holder /SAM-------------------------------------------------------
-    -- -------------------------------------------------------------------------------------------------------
-    -- sets.TP.EmpyreanTrainer.SAM = sets.TP.EmpyreanTrainer
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC = set_combine(sets.TP.EmpyreanTrainer.MidACC, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC = set_combine(sets.TP.EmpyreanTrainer.HighACC, {})
-    --
-    -- sets.TP.EmpyreanTrainer.SAM.HighHaste = set_combine(sets.TP.EmpyreanTrainer.HighHaste, {})
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC.HighHaste = set_combine(sets.TP.EmpyreanTrainer.MidACC.HighHaste, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC.HighHaste = set_combine(sets.TP.EmpyreanTrainer.HighACC.HighHaste, {})
-    --
-    -- sets.TP.EmpyreanTrainer.SAM.Ionis = set_combine(sets.TP.EmpyreanTrainer.Ionis, {})
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC.Ionis = set_combine(sets.TP.EmpyreanTrainer.MidACC.Ionis, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC.Ionis = set_combine(sets.TP.EmpyreanTrainer.HighACC.Ionis, {})
-    --
-    -- sets.TP.EmpyreanTrainer.SAM.HighHaste.Ionis = set_combine(sets.TP.EmpyreanTrainer.HighHaste.Ionis, {})
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC.HighHaste.Ionis = set_combine(sets.TP.EmpyreanTrainer.MidACC.HighHaste.Ionis, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC.HighHaste.Ionis = set_combine(sets.TP.EmpyreanTrainer.HighACC.HighHaste.Ionis, {})
-    --
-    -- sets.TP.EmpyreanTrainer.SAM.STP = set_combine(sets.TP.EmpyreanTrainer.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC.STP = set_combine(sets.TP.EmpyreanTrainer.MidACC.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC.STP = set_combine(sets.TP.EmpyreanTrainer.HighACC.STP, {})
-    --
-    -- sets.TP.EmpyreanTrainer.SAM.HighHaste.STP = set_combine(sets.TP.EmpyreanTrainer.HighHaste.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC.HighHaste.STP = set_combine(sets.TP.EmpyreanTrainer.MidACC.HighHaste.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC.HighHaste.STP = set_combine(sets.TP.EmpyreanTrainer.HighACC.HighHaste.STP, {})
-    --
-    -- sets.TP.EmpyreanTrainer.SAM.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.Ionis.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.MidACC.Ionis.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.HighACC.Ionis.STP, {})
-    --
-    -- sets.TP.EmpyreanTrainer.SAM.HighHaste.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.HighHaste.Ionis.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.MidACC.HighHaste.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.MidACC.HighHaste.Ionis.STP, {})
-    -- sets.TP.EmpyreanTrainer.SAM.HighACC.HighHaste.Ionis.STP = set_combine(sets.TP.EmpyreanTrainer.HighACC.HighHaste.Ionis.STP, {})
-
     -------------------------------------------------------------------------------------------------------
     ------------------------------------------Deathbane------------------------------------------------
     -------------------------------------------------------------------------------------------------------
     sets.TP.Deathbane = set_combine(
-        drk_gear.tp_low_acc,
+        set_combine(drk_gear.tp_low_acc, drk_gear.tp_mid_acc),
         {main="Deathbane", sub="Utu Grip"}
     )
-    sets.TP.Deathbane.MidACC = set_combine(sets.TP.Deathbane,  drk_gear.tp_mid_acc)
-    sets.TP.Deathbane.HighACC = set_combine(sets.TP.Deathbane.MidACC,{})
 
-    sets.TP.Deathbane.HighHaste = set_combine(sets.TP.Deathbane,{})
-    sets.TP.Deathbane.MidACC.HighHaste = set_combine(sets.TP.Deathbane.HighHaste, drk_gear.tp_mid_acc)
-    sets.TP.Deathbane.HighACC.HighHaste = set_combine(sets.TP.Deathbane.MidACC.HighHaste,{})
+    -------------------------------------------------------------------------------------------------------
+    ------------------------------------------WaxSword------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
+    sets.TP.WaxSword = set_combine(
+        set_combine(drk_gear.tp_low_acc, drk_gear.tp_mid_acc),
+        {main="Wax Sword"}
+    )
 
-    sets.TP.Deathbane.Ionis = set_combine(sets.TP.Deathbane,{})
-    sets.TP.Deathbane.MidACC.Ionis = set_combine(sets.TP.Deathbane.Ionis, drk_gear.tp_mid_acc)
-    sets.TP.Deathbane.HighACC.Ionis = set_combine(sets.TP.Deathbane.MidACC.Ionis,{})
-
-    sets.TP.Deathbane.HighHaste.Ionis = set_combine(sets.TP.Deathbane.HighHaste,{})
-    sets.TP.Deathbane.MidACC.HighHaste.Ionis = set_combine(sets.TP.Deathbane.HighHaste.Ionis, drk_gear.tp_mid_acc)
-    sets.TP.Deathbane.HighACC.HighHaste.Ionis = set_combine(sets.TP.Deathbane.MidACC.HighHaste.Ionis,{})
-
-    sets.TP.Deathbane.STP = set_combine(sets.TP.Deathbane,{})
-    sets.TP.Deathbane.MidACC.STP = set_combine(sets.TP.Deathbane.MidACC, drk_gear.tp_mid_acc)
-    sets.TP.Deathbane.HighACC.STP = set_combine(sets.TP.Deathbane.HighACC,{})
-
-    sets.TP.Deathbane.HighHaste.STP = set_combine(sets.TP.Deathbane.HighHaste,{})
-    sets.TP.Deathbane.MidACC.HighHaste.STP = set_combine(sets.TP.Deathbane.MidACC.HighHaste,{})
-    sets.TP.Deathbane.HighACC.HighHaste.STP = set_combine(sets.TP.Deathbane.HighACC.HighHaste,{})
-
-    sets.TP.Deathbane.Ionis.STP = set_combine(sets.TP.Deathbane.Ionis,{})
-    sets.TP.Deathbane.MidACC.Ionis.STP = set_combine(sets.TP.Deathbane.MidACC.Ionis,{})
-    sets.TP.Deathbane.HighACC.Ionis.STP = set_combine(sets.TP.Deathbane.HighACC.Ionis,{})
-
-    sets.TP.Deathbane.HighHaste.Ionis.STP = set_combine(sets.TP.Deathbane.HighHaste,{})
-    sets.TP.Deathbane.MidACC.HighHaste.Ionis.STP = set_combine(sets.TP.Deathbane.MidACC.HighHaste,{})
-    sets.TP.Deathbane.HighACC.HighHaste.Ionis.STP = set_combine(sets.TP.Deathbane.HighACC.HighHaste,{})
-
-    -- -------------------------------------------------------------------------------------------------------
-    -- -- Deathbane /SAM -------------------------------------------------------------------------------------
-    -- -------------------------------------------------------------------------------------------------------
-    -- sets.TP.Deathbane.SAM = sets.TP.Deathbane
-    -- sets.TP.Deathbane.SAM.MidACC = set_combine(sets.TP.Deathbane.MidACC, {})
-    -- sets.TP.Deathbane.SAM.HighACC = set_combine(sets.TP.Deathbane.HighACC, {})
-    --
-    -- sets.TP.Deathbane.SAM.HighHaste = set_combine(sets.TP.Deathbane.HighHaste, {})
-    -- sets.TP.Deathbane.SAM.MidACC.HighHaste = set_combine(sets.TP.Deathbane.MidACC.HighHaste, {})
-    -- sets.TP.Deathbane.SAM.HighACC.HighHaste = set_combine(sets.TP.Deathbane.HighACC.HighHaste, {})
-    --
-    -- sets.TP.Deathbane.SAM.Ionis = set_combine(sets.TP.Deathbane.Ionis, {})
-    -- sets.TP.Deathbane.SAM.MidACC.Ionis = set_combine(sets.TP.Deathbane.MidACC.Ionis, {})
-    -- sets.TP.Deathbane.SAM.HighACC.Ionis = set_combine(sets.TP.Deathbane.HighACC.Ionis, {})
-    --
-    -- sets.TP.Deathbane.SAM.HighHaste.Ionis = set_combine(sets.TP.Deathbane.HighHaste.Ionis, {})
-    -- sets.TP.Deathbane.SAM.MidACC.HighHaste.Ionis = set_combine(sets.TP.Deathbane.MidACC.HighHaste.Ionis, {})
-    -- sets.TP.Deathbane.SAM.HighACC.HighHaste.Ionis = set_combine(sets.TP.Deathbane.HighACC.HighHaste.Ionis, {})
-    --
-    -- sets.TP.Deathbane.SAM.STP = set_combine(sets.TP.Deathbane.STP, {})
-    -- sets.TP.Deathbane.SAM.MidACC.STP = set_combine(sets.TP.Deathbane.MidACC.STP, {})
-    -- sets.TP.Deathbane.SAM.HighACC.STP = set_combine(sets.TP.Deathbane.HighACC.STP, {})
-    --
-    -- sets.TP.Deathbane.SAM.HighHaste.STP = set_combine(sets.TP.Deathbane.HighHaste.STP, {})
-    -- sets.TP.Deathbane.SAM.MidACC.HighHaste.STP = set_combine(sets.TP.Deathbane.MidACC.HighHaste.STP, {})
-    -- sets.TP.Deathbane.SAM.HighACC.HighHaste.STP = set_combine(sets.TP.Deathbane.HighACC.HighHaste.STP, {})
-    --
-    -- sets.TP.Deathbane.SAM.Ionis.STP = set_combine(sets.TP.Deathbane.Ionis.STP, {})
-    -- sets.TP.Deathbane.SAM.MidACC.Ionis.STP = set_combine(sets.TP.Deathbane.MidACC.Ionis.STP, {})
-    -- sets.TP.Deathbane.SAM.HighACC.Ionis.STP = set_combine(sets.TP.Deathbane.HighACC.Ionis.STP, {})
-    --
-    -- sets.TP.Deathbane.SAM.HighHaste.Ionis.STP = set_combine(sets.TP.Deathbane.HighHaste.Ionis.STP, {})
-    -- sets.TP.Deathbane.SAM.MidACC.HighHaste.Ionis.STP = set_combine(sets.TP.Deathbane.MidACC.HighHaste.Ionis.STP, {})
-    -- sets.TP.Deathbane.SAM.HighACC.HighHaste.Ionis.STP = set_combine(sets.TP.Deathbane.HighACC.HighHaste.Ionis.STP, {})
+    -------------------------------------------------------------------------------------------------------
+    ------------------------------------------BrassDagger------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
+    sets.TP.BrassDagger = set_combine(
+        set_combine(drk_gear.tp_low_acc, drk_gear.tp_mid_acc),
+        {main="Brass Dagger"}
+    )
+    -------------------------------------------------------------------------------------------------------
+    ------------------------------------------Claymore------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
+    sets.TP.Claymore = set_combine(
+        set_combine(drk_gear.tp_low_acc, drk_gear.tp_mid_acc),
+        {main="Claymore", sub="Utu Grip"}
+    )
+    -------------------------------------------------------------------------------------------------------
+    ------------------------------------------Brass Zaghnal------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
+    sets.TP.BrassZaghnal = set_combine(
+        set_combine(drk_gear.tp_low_acc, drk_gear.tp_mid_acc),
+        {main="Brass Zaghnal", sub="Utu Grip"}
+    )
+    -------------------------------------------------------------------------------------------------------
+    ------------------------------------------ShaWujingsLance------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
+    sets.TP.ShaWujingsLance = set_combine(
+        set_combine(drk_gear.tp_low_acc, drk_gear.tp_mid_acc),
+        {main="Sha Wujing's Lance", sub="Utu Grip"}
+    )
 
 
     -- AM3 Rancor ON Mantle --
@@ -1278,21 +1109,23 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'SAM' then
-        if WeaponIndex == 1 or WeaponIndex == 3 then -- Apoc
+        if WeaponIndex == 1 or WeaponIndex == 3 then -- Scythe
             set_macro_page(1, 1)
-        elseif WeaponIndex == 2 or WeaponIndex == 4 then -- Apoc
+        elseif WeaponIndex == 2 or WeaponIndex == 4 then -- GS
             set_macro_page(1, 2)
         end
     elseif player.sub_job == 'THF' then
-        if WeaponIndex == 1 or WeaponIndex == 3 then -- Apoc
+        if WeaponIndex == 1 or WeaponIndex == 3 then -- Scythe
             set_macro_page(1, 3)
-        elseif WeaponIndex == 2 or WeaponIndex == 4  then -- Apoc
+        elseif WeaponIndex == 2 or WeaponIndex == 4  then  -- GS
             set_macro_page(1, 4)
+        elseif WeaponIndex > 4 or WeaponIndex < 10 then -- empyrean proccing shit
+            set_macro_page(1, 17)
         end
     elseif player.sub_job == 'WAR' or WeaponIndex == 3 then
-        if WeaponIndex == 1 then -- Apoc
+        if WeaponIndex == 1 or WeaponIndex == 3 then -- Scythe
             set_macro_page(1, 5)
-        elseif WeaponIndex == 2 or WeaponIndex == 4  then -- Apoc
+        elseif WeaponIndex == 2 or WeaponIndex == 4  then  -- GS
             set_macro_page(1, 6)
         end
     -- elseif player.sub_job == 'DNC' then

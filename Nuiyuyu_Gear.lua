@@ -1,5 +1,37 @@
 local misc = {
     augments = {
+        espiritus = {
+            name="Espiritus",
+            augments={
+                'Summoning magic skill +15',
+                'Pet: Mag. Acc.+30',
+                'Pet: Damage taken -4%'
+            }
+        },
+        apogee_crown = {
+            name="Apogee Crown +1",
+            augments={
+                'Pet: Attack+25',
+                'Pet: "Mag.Atk.Bns."+25',
+                'Blood Pact Dmg.+8'
+            }
+        },
+        apogee_slacks = {
+            name="Apogee Slacks +1",
+            augments={
+                'Pet: STR+20',
+                'Blood Pact Dmg.+14',
+                'Pet: "Dbl. Atk."+4'
+            }
+        },
+        apogee_pumps = {
+            name="Apogee Pumps +1",
+            augments={
+                'Pet: Attack+25',
+                'Pet: "Mag.Atk.Bns."+25',
+                'Blood Pact Dmg.+8',
+            }
+        },
         merlinic_jubbah_fastcast = {
             name="Merlinic Jubbah",
             augments={
@@ -18,9 +50,9 @@ local misc = {
         merlinic_dastanas_bp = {
             name="Merlinic Dastanas",
             augments={
-                'Pet: Mag. Acc.+27',
-                '"Blood Pact" ability delay -1',
-                'Pet: "Mag.Atk.Bns."+9',
+                'Pet: Attack+8 Pet: Rng.Atk.+8',
+                'Blood Pact Dmg.+9',
+                'Pet: "Mag.Atk.Bns."+5',
             }
         },
         merlinic_crakows_fastcast = {
@@ -30,6 +62,38 @@ local misc = {
                 '"Fast Cast"+5',
                 'Mag. Acc.+6',
                 '"Mag.Atk.Bns."+6'
+            }
+        },
+        vanya_hood = {
+            name="Vanya Hood",
+            augments={
+                'MP+50',
+                '"Cure" potency +7%',
+                'Enmity-6',
+            }
+        },
+        vanya_robe = {
+            name="Vanya Robe",
+            augments={
+                'Healing magic skill +20',
+                '"Cure" spellcasting time -7%',
+                'Magic dmg. taken -3',
+            }
+        },
+        vanya_slops = {
+            name="Vanya Slops",
+            augments={
+                'Healing magic skill +20',
+                '"Cure" spellcasting time -7%',
+                'Magic dmg. taken -3',
+            }
+        },
+        vanya_clogs = {
+            name="Vanya Clogs",
+            augments={
+                'Healing magic skill +20',
+                '"Cure" spellcasting time -7%',
+                'Magic dmg. taken -3',
             }
         },
     },
@@ -57,7 +121,28 @@ local misc = {
             hands="Azimuth Gloves +1",
             legs="Azimuth Tights +1",
             feet="Azimuth Gaiters +1",
-        }
+        },
+        smn_af = {
+            head="Convoker's Horn +2",
+            head="Convoker's Horn +2",
+            -- hands="Geo. Mitaines +2",
+            -- legs="Geomancy Pants +2",
+            feet="Convo. Pigaches +2",
+        },
+        smn_relic = {
+            -- head={ name="Bagua Galero +3", augments={'Enhances "Primeval Zeal" effect',}},
+            -- body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
+            -- hands={ name="Bagua Mitaines +3", augments={'Enhances "Curative Recantation" effect',}},
+            -- legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},
+            -- feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
+        },
+        smn_empyrean = {
+            -- head="Azimuth Hood +1",
+            -- body="Azimuth Coat +1",
+            -- hands="Azimuth Gloves +1",
+            -- legs="Azimuth Tights +1",
+            -- feet="Azimuth Gaiters +1",
+        },
     },
     capes = {
         geo = {
@@ -261,8 +346,8 @@ return {
         },
     },
     smn = {
-        idle = {
-            ammo="Seraphicaller",
+        idle = { -- no pet
+            ammo="Sancus Sachet +1",
             main="Espiritus",
             sub="Enki Strap",
             head="Inyanga Tiara +1",
@@ -278,12 +363,30 @@ return {
             right_ring="Tali'ah Ring",
             back=capes.smn.pet_idle,
         },
+        perpetuation = {
+            ammo="Sancus Sachet +1",
+            main="Was",
+            sub="Enki Strap",
+            head="Inyanga Tiara +1",
+            body="Inyanga Jubbah +1",
+            hands="Inyan. Dastanas +1",
+            legs="Inyanga Shalwar +1",
+            feet=augments.apogee_pumps,
+            neck="Shulmanu Collar",
+            waist="Incarnation Sash",
+    		ear1="Influx Earring",
+    		ear2="Lodurr Earring",
+    		ring1="Stikini Ring",
+    		ring2="Stikini Ring",
+            back=capes.smn.pet_idle,
+        },
         fastcast = {
             ammo="Seraphicaller",
             main="Espiritus",
             sub="Enki Strap",
             head="Nahtirah Hat",
             body="Inyanga Jubbah +1",
+            neck={ name="Smn. Collar +1", augments={'Path: A',}},
             hands=augments.merlinic_dastanas_fastcast,
             legs="Vanya Slops",
             feet=augments.merlinic_crakows_fastcast,
@@ -296,57 +399,72 @@ return {
             back=capes.smn.pet_idle,
         },
         bloodpact = {
+            main=augments.espiritus,
+            sub="Vox Grip",
+    		ammo="Sancus Sachet +1",
+    		head=jse.smn_af.head, -- jse.smn_empyrean.head -- "Beckoner's Horn +1",
+    		neck={ name="Smn. Collar +1", augments={'Path: A',}},--"Incanter's Torque",
+    		ear1="Influx Earring", --"Lugalbanda Earring",--"Cath Palug Earring",
+    		ear2="Lodurr Earring",
+    		body="Baayami Robe",
+    		hands="Baayami Cuffs",
+    		ring1="Stikini Ring", --"Evoker's Ring",
+    		ring2="Stikini Ring",
+    		-- back="Conveyance Cape",--"Conveyance Cape",--{ name="Conveyance Cape", augments={'Summoning magic skill +4','Blood Pact Dmg.+2','Blood Pact ab. del. II -1',}},--{ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+12','Blood Pact Dmg.+2',}},
+    		waist="Lucidity Sash",--"Kobo Obi",
+    		legs="Baayami Slops",
+    		feet="Baayami Sabots"
         },
         healing = {
-            main="Gada",
-            sub="Sors Shield",
-            head="Vanya Hood",
-            body="Vanya Robe",
-            hands="Inyan. Dastanas +1",
-            legs="Vanya Slops",
-            feet="Vanya Clogs",
-            neck="Shulmanu Collar",
-            waist="Belisama's Rope +1",
-            left_ear="Mendi. Earring",
-            right_ear="Influx Earring",
-            left_ring="Tali'ah Ring",
-            right_ring="Inyanga Ring",
-            back=capes.smn.pet_idle,
+    		main="Gada",
+    		sub="Sors Shield",
+    		head=augments.vanya_hood,
+    		neck="Loricate Torque", -- "Orunmila's Torque",
+    		ear1="Mendicant's Earring", -- "Meili Earring",
+    		-- ear2="Novia Earring",
+    		-- body="Zendik Robe",
+    		hands="Inyanga Dastanas +1", --{ name="Telchine Gloves", augments={'"Fast Cast"+5','Enh. Mag. eff. dur. +10',}},
+    		ring1="Stikini Ring", -- ring1="Lebeche Ring",
+    		ring2="Stikini Ring", -- ring2="Menelaus's Ring",
+    		-- back="Tempered Cape +1",
+    		-- waist="Luminary Sash",
+    		legs=augments.vanya_slops, -- "Convoker's Spats +3",
+    		feet=augments.vanya_clogs,
+        },
+        siphon = {
+    		-- main="Chatoyant Staff",
+    		sub="Vox Grip",
+    		-- ammo="Esper Stone +1",
+    		head=jse.smn_af.head, -- "Baayami Hat +1",
+    		-- neck="Incanter's Torque",
+    		-- ear1="Cath Palug Earring",
+    		ear2="Lodurr Earring",
+    		body="Baayami Robe",
+    		hands="Baayami Cuffs",
+    		ring1="Stikini Ring", --"Evoker's Ring",
+    		ring2="Stikini Ring",
+    		-- back="Conveyance Cape",
+    		waist="Lucidity Sash",--"Kobo Obi",
+    		legs="Baayami Slops",
+    		-- feet="Beck. Pigaches +1"
         },
         nuke = {},
-        perpetuation = {
-            ammo="Seraphicaller",
-            main="Was",
-            sub="Enki Strap",
-            head="Inyanga Tiara +1",
-            body="Inyanga Jubbah +1",
-            hands="Inyan. Dastanas +1",
-            legs="Inyanga Shalwar +1",
-            feet="Baayami Sabots",
-            neck="Shulmanu Collar",
-            waist="Incarnation Sash",
-            left_ear="Flashward Earring",
-            right_ear="Influx Earring",
-            left_ring="Inyanga Ring",
-            right_ring="Tali'ah Ring",
-            back=capes.smn.pet_idle,
-        },
         summoning = {
-            ammo="Seraphicaller",
-            main="Was",
-            sub="Vox Strap",
-            head="Tali'ah Turban",
-            body="Baayami Robe",
-            hands="Baayami Cuffs",
-            legs="Baayami Slops", -- baayami or relic?
-            feet="Baayami Sabots",
-            neck="Shulmanu Collar",
-            waist="Lucidity Sash",
-            left_ear="Mendi. Earring",
-            right_ear="Flashward Earring",
-            left_ring="Stikini Ring",
-            right_ring="Stikini Ring",
-            back=capes.smn.pet_idle,
+    		main=augments.espiritus,
+    		sub="Vox Grip",
+    		ammo="Sancus Sachet +1",
+    		head=jse.smn_af.head,--"Baayami Hat +1",
+    		neck={ name="Smn. Collar +1", augments={'Path: A',}}, --"Incanter's Torque",
+    		-- ear1="Cath Palug Earring",
+    		ear2="Lodurr Earring",
+    		body="Baayami Robe",
+    		hands="Baayami Cuffs", -- "Lamassu Mitts +1",
+    		ring1="Stikini Ring", --"Evoker's Ring",
+    		ring2="Stikini Ring",
+    		back=capes.smn.pet_idle,
+    		waist="Lucidity Sash",--"Kobo Obi",
+    		legs="Baayami Slops",
+    		feet="Baayami Sabots"
         },
     }
 }
